@@ -1,45 +1,116 @@
-This project implements a real-time word suggestion system, mimicking the autocomplete functionality found in search engines and terminals.
+That's a great idea\! Adding links to documentation and a video demo significantly enhances the quality of a `README`.
 
-🌟 Project Goals
-To develop an efficient system for generating word suggestions based on partial user input.
+Here is the updated `README.md` file, incorporating placeholders for your documentation and video links.
 
-To achieve real-time suggestion generation with minimal latency.
+## 🤖 Autocomplete Chatbot (C++ Terminal Project)
 
-To implement a dynamic system that learns and updates its word corpus over time.
+A high-performance command-line chatbot application that uses a **Trie (Prefix Tree)** for efficient word and command lookup and a **Priority Queue** for intelligently ranking and suggesting autocomplete options.
 
-⚙️ Core Functionality
-Real-time Input Capture: Captures the input string as the user types.
+-----
 
-Prefix-Based Lookup: Queries a highly optimized data structure (e.g., a Trie) to find words matching the current prefix.
+### ✨ Features
 
-Dynamic Suggestion Display: Presents a list of matching words to the user.
+  * **Fast Autocomplete:** Utilizes a **Trie** data structure to achieve $O(L)$ time complexity for prefix searching, where $L$ is the length of the prefix.
+  * **Intelligent Suggestions:** Uses a **Priority Queue (Max Heap)** to rank suggestions based on their frequency or a predefined weight, ensuring the most relevant options appear first.
+  * **Case-Insensitive Search:** Provides a more flexible and user-friendly search experience.
+  * **Terminal Interface:** A simple and robust command-line interface for direct interaction.
 
-Adaptive Learning:
+-----
 
-Updates Frequency: Increments the priority or frequency score if a typed word already exists.
+### 📚 Documentation & Demo
 
-Adds New Words: Automatically incorporates new, completed words into the data structure if they were previously absent, ensuring the suggestion list continuously improves.
+| Resource | Link | Description |
+| :--- | :--- | :--- |
+| **Project Documentation** | **[https://drive.google.com/file/d/1Tfyd7NsksI5ihCcDu_j_I1ExjEYP1kS4/view?usp=drive_link]** | In-depth explanation of the Trie and Priority Queue implementation, algorithm design, and complexity analysis. |
+| **Video Demonstration** | **[https://drive.google.com/file/d/1q8Hz2FsKJATqX6O0bw0-2HG0yfzSDNUt/view?usp=drive_link]** | A brief screen-capture showing the chatbot running in the terminal and demonstrating the autocomplete features. |
 
-🛠️ Technology Stack (Placeholder - To be filled in by developer)
-Language: [e.g., Python, JavaScript, Java]
+-----
 
-Data Structure: [e.g., Trie/Prefix Tree, Hash Map]
+### 🛠️ Technologies & Structure
 
-Interface: [e.g., Command Line Interface (CLI), Web UI (HTML/CSS/JS)]
+  * **Language:** C++
+  * **Environment:** Console/Terminal Application
 
-🚀 Getting Started
-Clone the Repository:
+#### Core Data Structures:
 
-Bash
+1.  **Trie Node:**
 
-git clone [Your Repository URL]
-Installation:
+      * Holds pointers to **26 children** (or more, depending on the character set).
+      * Stores a **frequency/weight** to track how often the word ending at this node is used.
+      * A boolean flag to mark the end of a complete word.
 
-Bash
+2.  **Suggestion Struct/Class:**
 
-# [Insert any necessary installation commands here, e.g., pip install -r requirements.txt]
-Run the System:
+      * A structure to hold a suggested **word** and its **priority/weight**.
+      * Used in conjunction with the Priority Queue.
 
-Bash
+3.  **Priority Queue:**
 
-# [Insert command to run the main application file]
+      * A **Max Heap** implementation is used to store `Suggestion` objects.
+      * It's primarily used during the suggestion phase to collect the top $K$ highest-weighted words found under the given prefix in the Trie.
+
+-----
+
+### 🚀 Getting Started
+
+#### Prerequisites
+
+  * A C++ compiler (e.g., GCC, g++)
+  * A terminal environment
+
+#### Compilation and Execution
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/manish-12345678911/Autocomplete-Chatbot-using-Trie-and-Priority-Queue-Predict-user-input..git
+    cd Autocomplete-Chatbot-using-Trie-and-Priority-Queue
+    ```
+
+2.  **Compile the source code:**
+    Assuming your main file is named `main.cpp`, use the following command:
+
+    ```bash
+    g++ -o chatbot main.cpp # Add other source files if necessary
+    ```
+
+3.  **Run the application:**
+
+    ```bash
+    ./chatbot
+    ```
+
+-----
+
+### 💡 Usage
+
+The chatbot will typically load a dictionary or training data upon startup (which populates the Trie).
+
+1.  **Start Typing:** Begin typing a word or command.
+2.  **View Suggestions:** The application will immediately display a list of suggested complete words based on the current prefix, ordered by relevance (priority/frequency).
+3.  **Select/Complete:** Continue typing, or use a command (e.g., arrow keys, or a number) to select one of the suggested completions.
+
+> **Example Terminal Output:**
+>
+> ```
+> > Enter Text: aut
+> > Suggestions:
+> > 1. **autocomplete** (Frequency: 54)
+> > 2. **author** (Frequency: 30)
+> > 3. **auto** (Frequency: 12)
+> > 4. **automatic** (Frequency: 8)
+> > > Enter Text: autocomplete
+> ```
+
+-----
+
+### 👤 Owner
+
+| Name | Roll No. |
+| :---: | :--- |
+| **[Aman Raj]** | **[24EARIT008]** |
+| **[Suman Raj]** | **[24EARIT056]** |
+
+-----
+
+Would you like me to help you draft the content for your **Project Documentation** or provide tips for recording the **Video Demonstration**?
