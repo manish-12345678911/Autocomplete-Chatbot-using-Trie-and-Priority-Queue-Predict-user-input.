@@ -104,13 +104,15 @@ The chatbot will typically load a dictionary or training data upon startup (whic
 
 -----
 
-### 👤 Owner
+### 👤 Contributor
 
 | Name | Roll No. |
 | :---: | :--- |
 | **[Aman Raj]** | **[24EARIT008]** |
-| **[Suman Raj]** | **[24EARIT056]** |
-
+| **[Suman Raj]** | **[24EARIT058]** |
+| **[Mayank Kumar]** | **[24EARIT032]** |
+| **[Manish Kumar Sah]** | **[24EARIT030]** |
+| **[Niraj Kumar Mandal]** | **[24EARIT036]** |
 -----
 
 Would you like me to help you draft the content for your **Project Documentation** or provide tips for recording the **Video Demonstration**?
